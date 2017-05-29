@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var pug = require("pug");
 
+app.use("/public", express.static(__dirname+"/public"));
+app.engine('pug',require('pug').__express);
+app.set('view engine','pug');
 
 app.get("/", function(req, res){ //diese funktion nennt sich callback
 	var compileFunction = pug.compileFile('./template/index_1.pug');
@@ -9,13 +12,54 @@ app.get("/", function(req, res){ //diese funktion nennt sich callback
 	var html = compileFunction(data);
 	res.send(html); //der ganze backend scheiß
 });
+
+/*app.get("/find", function(req, res){
+	var compileFunction = pug.compileFile('./template/FindCompanyPage.pug');
+	var data = {Company: "Company"};
+	var html = compileFunction(data);
+	res.send(html); //der ganze backend scheiß
+});*/
+
+app.get("/findcompany", function(req, res){ 
+
+
+/*var html = pug.renderFile('./template/FindCompanyPage.pug');
+res.send(html);*/
+
+var data = {
+	message:'Hello world',
+	lists : [ "Company Name", "Company Field", "Company Age", "Foundet", "Area"],
+	urls : './template/FindCompanyPage.pug'
+} 
+
+
+res.render(__dirname+'/template/FindCompany', {data:data});
+
+
+});
+
+app.get("/findpeople", function(req, res){ 
+
+var html = pug.renderFile('./template/FindPeople.pug');
+res.send(html);
+});
+
+app.get("/findrandom", function(req, res){ 
+
+var html = pug.renderFile('./template/FindRandom.pug');
+res.send(html);
+});
+
+
 //als beispiel für res.send '<strong style="color: red">Hello World!</strong>'
-//erster parameter = router
+//erster parameter = routerS
 //zweiter parameter = callback
 
 app.get("/login", function(req, res){
 	res.send("goodbye World")
 });
+
+
 
 app.listen(3000, function(){
 	console.log("bla bla port 3000")
