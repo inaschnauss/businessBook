@@ -6,6 +6,7 @@ app.use("/public", express.static(__dirname+"/public"));
 app.engine('pug',require('pug').__express);
 app.set('view engine','pug');
 
+
 app.get("/", function(req, res){ //diese funktion nennt sich callback
 	var compileFunction = pug.compileFile('./template/index_1.pug');
 	var data = {name: "Ina"};
@@ -54,6 +55,19 @@ res.send(html);
 //als beispiel für res.send '<strong style="color: red">Hello World!</strong>'
 //erster parameter = routerS
 //zweiter parameter = callback
+
+app.get("/main", function(req, res){
+	var html = pug.renderFile('./template/main.pug')
+	res.send(html)
+});
+app.get("/contactus", function(req, res){
+	var html = pug.renderFile('./template/main.pug')
+	res.send(html)
+});
+app.get("/faqs", function(req, res){
+	var html = pug.renderFile('./template/main.pug')
+	res.send(html)
+});
 
 app.get("/login", function(req, res){
 	res.send("goodbye World")
