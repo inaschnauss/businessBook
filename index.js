@@ -14,13 +14,6 @@ app.get("/", function(req, res){ //diese funktion nennt sich callback
 	res.send(html); //der ganze backend scheiß
 });
 
-/*app.get("/find", function(req, res){
-	var compileFunction = pug.compileFile('./template/FindCompanyPage.pug');
-	var data = {Company: "Company"};
-	var html = compileFunction(data);
-	res.send(html); //der ganze backend scheiß
-});*/
-
 app.get("/findcompany", function(req, res){ 
 
 
