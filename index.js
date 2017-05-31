@@ -8,7 +8,7 @@ app.set('view engine','pug');
 
 
 app.get("/", function(req, res){ //diese funktion nennt sich callback
-	var compileFunction = pug.compileFile('./template/index.pug');
+	var compileFunction = pug.compileFile('./pages/index.pug');
 	var data = {name: "Ina"};
 	var html = compileFunction(data);
 	res.send(html); //der ganze backend scheiß
