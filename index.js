@@ -29,24 +29,24 @@ res.send(html);*/
 var data = {
 	message:'Hello world',
 	lists : [ "Company Name", "Company Field", "Company Age", "Foundet", "Area"],
-	urls : './template/FindCompanyPage.pug'
+	urls : './FindCompanyPage.pug'
 } 
 
 
-res.render(__dirname+'/template/FindCompany', {data:data});
+res.render(__dirname+'/FindCompany', {data:data});
 
 
 });
 
 app.get("/findpeople", function(req, res){ 
 
-var html = pug.renderFile('./template/FindPeople.pug');
+var html = pug.renderFile('./FindPeople.pug');
 res.send(html);
 });
 
 app.get("/findrandom", function(req, res){ 
 
-var html = pug.renderFile('./template/FindRandom.pug');
+var html = pug.renderFile('./FindRandom.pug');
 res.send(html);
 });
 
