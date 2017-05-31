@@ -27,20 +27,20 @@ var data = {
 } 
 
 
-res.render(__dirname+'/FindCompany', {data:data});
+res.render(__dirname+'/pages/FindCompany', {data:data});
 
 
 });
 
 app.get("/findpeople", function(req, res){ 
 
-var html = pug.renderFile('./FindPeople.pug');
+var html = pug.renderFile('./pages/FindPeople.pug');
 res.send(html);
 });
 
 app.get("/findrandom", function(req, res){ 
 
-var html = pug.renderFile('./FindRandom.pug');
+var html = pug.renderFile('./pages/FindRandom.pug');
 res.send(html);
 });
 
