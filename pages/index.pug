@@ -4,50 +4,50 @@ link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/
 script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js')
 
 body
-    h1(class='center-align blue-text text-darken-3') Businessbook
-    div(class='blue-text text-darken-3 row center-allign')
-        div(class='col s4 center-align red section' style={'width':'25vw','height':'25vw'})
-            case signIn
-                default
-                    h3 Sign in / 
-                    h3 Register
-        div(class='col s4 center-align yellow section' style={'width':'25vw','height':'25vw'}) 
-            h3 Search
-            if hover
-                p search
-                //img search.jpg
-            p advanced
-        div(class='col s4 center-align green' style={'width':'25vw','height':'25vw'}) 
-            h3 Knowledge
-            h3 Page
+  h1(class='center-align blue-text text-darken-3') Businessbook
+  div(class='blue-text text-darken-3 row center-allign')
+    div(class='col s4 center-align red section' style={'width':'25vw','height':'25vw'})
+      case signIn
+        default
+          h3 Sign in / 
+          h3 Register
+    div(class='col s4 center-align yellow section' style={'width':'25vw','height':'25vw'}) 
+      h3 Search
+      if hover
+        p search
+        //img search.jpg
+      p advanced
+    div(class='col s4 center-align green' style={'width':'25vw','height':'25vw'}) 
+      h3 Knowledge
+      h3 Page
 
-    div(class='blue-text text-darken-3 row')      
-        div(class='col s4 center-align red darken-2' style={'width':'25vw','height':'25vw'}) 
-            h3 Event 
-            h3 Calendar
-        div(class='col s4 center-align blue lighten-4' style={'width':'25vw','height':'25vw'}) 
-            h3 Browse 
-            h3 Company
+  div(class='blue-text text-darken-3 row')      
+    div(class='col s4 center-align red darken-2' style={'width':'25vw','height':'25vw'}) 
+      h3 Event 
+      h3 Calendar
+    div(class='col s4 center-align blue lighten-4' style={'width':'25vw','height':'25vw'}) 
+      h3 Browse 
+      h3 Company
 
-    //static pages
-    div(class='blue-text darken-3')
-        p contact us
-        p FAQs
+  //static pages
+  div(class='blue-text darken-3')
+    p contact us
+    p FAQs
 
-    p1 Shofa
+  p1 Shofa
 //-clicked
-    when 0 
-        h3 username
-        h3 password
-        p forgot your password?
-        p register
-    //already signed in
-    when 1
-        //img profilePicture
-        h3 Hello, #{username}
-    //register
-    when 2 
-        h3 name
-        h3 email
-        h3 password
-        h3 password again
+  when 0 
+    h3 username
+    h3 password
+    p forgot your password?
+    p register
+  //already signed in
+  when 1
+    //img profilePicture
+    h3 Hello, #{username}
+  //register
+  when 2 
+    h3 name
+    h3 email
+    h3 password
+    h3 password again

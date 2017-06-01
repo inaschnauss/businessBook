@@ -8,8 +8,8 @@ app.set('view engine','pug');
 
 
 app.get("/", function(req, res){ //diese funktion nennt sich callback
-	var compileFunction = pug.compileFile('./pages/findcompany.pug');
-	var data = {name: "Ina"};
+	var compileFunction = pug.compileFile('./pages/index.pug');
+	var data = {name: "Ina Asra Shofa"};
 	var html = compileFunction(data);
 	res.send(html); //backend&co
 });
@@ -50,9 +50,12 @@ app.get("/faqs", function(req, res){
 	res.send(html)
 });
 
+
+
+
 app.get("/profile", function(req, res){
 	var html = pug.renderFile('./pages/profile.pug');
-	res.send(html);
+	res.render(__dirname+'/pages/profile', {data:data});
 });
 
 
