@@ -55,7 +55,7 @@ app.get("/faqs", function(req, res){
 
 app.get("/profile", function(req, res){
 	var html = pug.renderFile('./pages/profile.pug');
-	res.render(__dirname+'/pages/profile', {data:data});
+	res.send(html);
 });
 
 
