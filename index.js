@@ -58,6 +58,10 @@ app.get("/profile", function(req, res){
 	res.send(html);
 });
 
+app.get("/register", function(req, res){
+	var html = pug.renderFile('./pages/register.pug');
+	res.send(html);
+});
 
 
 app.listen(3000, function(){
