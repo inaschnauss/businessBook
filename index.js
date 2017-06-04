@@ -2,16 +2,27 @@ var express = require('express');
 var app = express();
 var pug = require("pug");
 
-app.use("/public", express.static(__dirname+"/public"));
+app.use("/assets", express.static(__dirname+"/assets"));
 app.engine('pug',require('pug').__express);
 app.set('view engine','pug');
 
 
 app.get("/", function(req, res){ //diese funktion nennt sich callback
-	var compileFunction = pug.compileFile('./template/index.pug');
-	var data = {name: "Ina"};
-	var html = compileFunction(data);
-	res.send(html); //der ganze backend scheiß
+	var data = {signIn: null};
+	res.render(__dirname+'/pages/index', {data:data});
+	// var compileFunction = pug.compileFile('./pages/index.pug');
+	// var html = compileFunction(data);
+	// res.send(html); //der ganze backend scheiß
+	
+});
+
+app.get("/signin", function(req, res){ 
+	var data = {signIn: 0};
+	res.render(__dirname+'/pages/index', {data:data});
+});
+app.get("/register", function(req, res){ 
+	var data = {signIn: 1};
+	res.render(__dirname+'/pages/index', {data:data});
 });
 
 app.get("/findcompany", function(req, res){ 
