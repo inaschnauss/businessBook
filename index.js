@@ -6,6 +6,11 @@ app.use("/public", express.static(__dirname+"/public"));
 app.engine('pug',require('pug').__express);
 app.set('view engine','pug');
 
+//require('css/materialize.css');
+//window.jQuery = require('jquery');
+//window.$ = require('jquery');
+//require('js/materialize.js');
+//require('materialize-css/js/init.js');
 
 app.get("/", function(req, res){ //diese funktion nennt sich callback
 	var compileFunction = pug.compileFile('./pages/index.pug');
@@ -36,9 +41,7 @@ app.get("/findrandom", function(req, res){
 	res.send(html);
 });
 
-/*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'
-//erster parameter = routerS
-zweiter parameter = callback*/
+/*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'*/
 
 app.get("/contactus", function(req, res){
 	var html = pug.renderFile('./pages/contactus.pug')
@@ -50,9 +53,6 @@ app.get("/faqs", function(req, res){
 	res.send(html)
 });
 
-
-
-
 app.get("/profile", function(req, res){
 	var html = pug.renderFile('./pages/profile.pug');
 	res.send(html);
@@ -63,6 +63,10 @@ app.get("/register", function(req, res){
 	res.send(html);
 });
 
+/*app.get("/test", function(req, res){
+	var html = pug.renderFile('./pages/test.pug');
+	res.send(html);
+});*/
 
 app.listen(3000, function(){
 	console.log("bla bla port 3000")

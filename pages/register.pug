@@ -1,26 +1,54 @@
-extends layout
+//include findpeople
+doctype html
 
-block content
-  .main.container
-    .row
-      .col-md-6.col-md-offset-3
-        h1.display-4.m-b-2 Sign Up
+html(lang="en")
+  head
+    include _head.pug
+    //include _navbar.pug
 
-        // register form
-        form(method='POST' action='/register')
-          div.form-group
-            label(for='name') Name:
-            input#name.form-control(type='text', placeholder='first and last' name='name')
-          div.form-group
-            label(for='email') Email:
-            input#email.form-control(type='email', placeholder='name@email.com' name='email')
-          div.form-group
-            label(for='favoriteBook') Favorite Book:
-            input#favoriteBook.form-control(type='text', placeholder='title of book' name='favoriteBook')
-          div.form-group
-            label(for='pw') Password:
-            input#pw.form-control(type='password' name='password')
-          div.form-group
-            label(for='pw2') Confirm Password:
-            input#pw2.form-control(type='password' name='confirmPassword')
-          button.btn.btn-primary(type='submit') Sign up
+    title Sign In
+
+    body
+
+      div.materialize-red.lighten-4 Bla bla
+      h2.materialize-red.lighten-4 tested
+      div(class="red")
+        h1 Hello World
+      // register form
+      form(method='POST' action='/register')
+
+        div.materialize-red-text.text-darken-2
+          label(for='name') Name:
+          input#name.form-control(type='text', placeholder='first and last' name='name')
+
+        div.form-group
+          label(for='email') Email:
+          input#email.form-control(type='email', placeholder='name@email.com' name='email')
+
+        div.form-group
+          label(for='email') Repeat Email:
+          input#email.form-control(type='email', placeholder='name@email.com' name='email')
+
+        div.form-group
+          label(for='pw') Password:
+          input#pw.form-control(type='password' name='password')
+
+        div.form-group
+          label(for='pw2') Confirm Password:
+          input#pw2.form-control(type='password' name='confirmPassword')
+
+button.btn.btn-primary(type='submit') Sign up
+
+
+h1(class='center-align blue-text text-darken-3') Businessbook
+div(class="container")
+div(class="row")
+  div(class="col s4") first
+  div(class="col s4") second
+  div(class="col s4") third
+
+
+
+script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+script(type="text/javascript" src="js/materialize.min.js")
+//script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js')
