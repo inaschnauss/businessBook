@@ -13,7 +13,7 @@ app.set('view engine','pug');
 //require('materialize-css/js/init.js');
 
 app.get("/", function(req, res){ //diese funktion nennt sich callback
-<<<<<<< HEAD
+
 	var data = {signIn: null};
 	res.render(__dirname+'/pages/index', {data:data});
 	// var compileFunction = pug.compileFile('./pages/index.pug');
@@ -29,12 +29,12 @@ app.get("/signin", function(req, res){
 app.get("/register", function(req, res){ 
 	var data = {signIn: 1};
 	res.render(__dirname+'/pages/index', {data:data});
-=======
+
 	var compileFunction = pug.compileFile('./pages/index.pug');
 	var data = {name: "Ina Asra Shofa"};
 	var html = compileFunction(data);
 	res.send(html); //backend&co
->>>>>>> origin/develop
+
 });
 
 app.get("/findcompany", function(req, res){
@@ -58,7 +58,7 @@ app.get("/findcompany", function(req, res){
 /*var html = pug.renderFile('./template/FindCompanyPage.pug');
 res.send(html);*/
 
-app.get("/findpeople", function(req, res){
+app.get("/findcompany#people", function(req, res){
 	var html = pug.renderFile('./pages/FindPeople.pug');
 	res.send(html);
 });
