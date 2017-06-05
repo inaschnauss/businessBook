@@ -67,19 +67,19 @@ app.get("/profile", function(req, res){
 	res.send(html);
 });
 
-<<<<<<< HEAD
+
 app.get("/impressum", function(req, res){
 	var html = pug.renderFile('./pages/impressum.pug');
 	res.send(html);
 });
 
 
-=======
+
 app.get("/register", function(req, res){
 	var html = pug.renderFile('./pages/register.pug');
 	res.send(html);
 });
->>>>>>> 31888cfb8da5d5b65e38be130f23441b7b79ba7a
+
 
 /*app.get("/test", function(req, res){
 	var html = pug.renderFile('./pages/test.pug');

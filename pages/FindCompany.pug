@@ -9,32 +9,37 @@ html
     body
         h1 Business Book (logo)
     
-    div.row
-        nav
-            ul
-                li
-                    a(href='/findcompany') Company 
-                li
-                    a(href='/findpeople') People
-                li
-                    a(href='/findrandom') Random
+        div.row
+            nav
+                ul
+                    li
+                        a(href='/findcompany') Company 
+                    li
+                        a(href='/findpeople') People
+                    li
+                        a(href='/findrandom') Random
   
   
-    div.row 
-        p Name
-            input(id="first_name" type ='text')
-    div.row 
-        p Company Field
-            input(id="first_name" type ='text')
-    div.row 
-         p Company Age
-            input(id="first_name" type ='text')
-    div.row 
-        p Foundet
-            input(id="first_name" type ='text')
-    div.row 
-        p Area
-            input(id="first_name" type ='text')
+        form.col.s12
+            div.row 
+                p.col.s12 Name
+                    input(placeholder='Fullname',type ='text')
+            div.row 
+                p.col.s12 Company Field
+                    input(placeholder='Placeholder',type ='text')
+            div.row 
+                p.col.s12 Company Age
+                    input(placeholder='Placeholder', type ='text')
+            div.row 
+                p.col.s12 Foundet
+                    input(placeholder='Placeholder', type ='text')
+            div.row 
+                p.col.s12 Area
+                    input(placeholder='Placeholder', type ='text')                      
+                a.waves-effect.waves-light.btn.right Search
 
-    a.waves-effect.waves-light.btn.right Search
+
+    footer
+        include _script.pug
+        include _footer.html
     
