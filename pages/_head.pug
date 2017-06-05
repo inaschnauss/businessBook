@@ -1,48 +1,14 @@
-meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 
-//CSS
-//link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
-//Import Google Icon Font
-link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet', type='text/css')
+meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 //- Let browser know website is optimized for mobile
 meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
 
-//- Import materialize.css
-link(type="text/css", rel="stylesheet", href="../materialize/css/materialize.css")
-//- Let browser know website is optimized for mobile
-//meta(name="viewport", content="width=device-width, initial-scale=1.0")
+include _style.pug
 
-div(class="card-panel teal lighten-2")
+div(class="card-panel blue")
   div(class="container")
-    h1.amber-text BusinessBook
+    h1.white-text BusinessBook
     div(class="row")
       div(class="col s4 m4 l4") first
       div(class="col s4 m4 l4") second
       div(class="col s4 m4 l4") third
-
-div.red
-  div.container
-    h2 Test
-    div.flow-text
-      This is an example of flow text which is known as responsive text. In some document layouts (e.g., magazines), you may need to run a series of text boxes that contain a sequence of text. The loaded text icon lets you flow text onto your pages. Depending on who you follow and what you read, you may have noticed the concept of “responsive text” being discussed in design circles recently. This was the best method I could come up with when I first started creating responsive websites: JS eases this difficulty by changing the font-size and subsequently the line-height based on a specific element's width.Responsive web design is to create web sites that look good on all devices. 
-
-div.container
-  div.row
-    div(class="card-panel hoverable") This is an example of hoverable card panel with materialize.
-
-div.container
-  div.row
-    div(class="col s12")
-      p.z-depth-0 no shade
-      p.z-depth-1 shade 1
-      p.z-depth-2 shade 2
-      p.z-depth-3 shade 3
-      p.z-depth-4 shade 4
-      p.z-depth-5 shade 5
-
-div.container
-  div.row
-    div.col.m6
-      img(src='images/austria.jpg')
-    div.col.m6
-      p This is responsive

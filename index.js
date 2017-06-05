@@ -63,6 +63,10 @@ app.get("/register", function(req, res){
 	res.send(html);
 });
 
+$(document).ready(function(){
+	$('.materialboxed').materialbox();
+});
+
 /*app.get("/test", function(req, res){
 	var html = pug.renderFile('./pages/test.pug');
 	res.send(html);
