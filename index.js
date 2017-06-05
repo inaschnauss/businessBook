@@ -15,12 +15,21 @@ app.get("/", function(req, res){ //diese funktion nennt sich callback
 });
 
 app.get("/findcompany", function(req, res){
-	var data = {
+	/*var data = {
 		message:'Hello world',
 		lists : [ "Company Name", "Company Field", "Company Age", "Foundet", "Area"],
 		urls : './FindCompanyPage.pug'
 	}
-	res.render(__dirname+'/pages/FindCompany', {data:data});
+
+    p #{data.message}
+        each list in data.lists
+            p  #{list}
+            p
+              input(type ='text')
+              if (list=="Company Name") 
+	res.render(__dirname+'/pages/FindCompany', {data:data});*/
+	var html = pug.renderFile('./pages/FindCompany.pug');
+	res.send(html);
 });
 
 /*var html = pug.renderFile('./template/FindCompanyPage.pug');
@@ -57,6 +66,12 @@ app.get("/profile", function(req, res){
 	var html = pug.renderFile('./pages/profile.pug');
 	res.send(html);
 });
+
+app.get("/impressum", function(req, res){
+	var html = pug.renderFile('./pages/impressum.pug');
+	res.send(html);
+});
+
 
 
 

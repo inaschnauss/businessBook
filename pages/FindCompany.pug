@@ -3,24 +3,38 @@ doctype html
 html
     head
         title Search Company
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+                    
     body
         h1 Business Book (logo)
     
+    div.row
         nav
-         li
-             a(href='/findcompany') Company 
-         li
-             a(href='/findpeople') People
-         li
-            a(href='/findrandom') Random
-        hr
+            ul
+                li
+                    a(href='/findcompany') Company 
+                li
+                    a(href='/findpeople') People
+                li
+                    a(href='/findrandom') Random
+  
+  
+    div.row 
+        p Name
+            input(id="first_name" type ='text')
+    div.row 
+        p Company Field
+            input(id="first_name" type ='text')
+    div.row 
+         p Company Age
+            input(id="first_name" type ='text')
+    div.row 
+        p Foundet
+            input(id="first_name" type ='text')
+    div.row 
+        p Area
+            input(id="first_name" type ='text')
 
-    p #{data.message}
-        each list in data.lists
-            p  #{list}
-            p
-              input(type ='text')
-              if (list=="Company Name") 
-                  
-                    
+    a.waves-effect.waves-light.btn.right Search
+    
