@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    include _head.pug
+    //include _navbar.pug
+
+    title Sign In
+
+    body
+      div.container
+        div.row
+          .col-md-6.col-md-offset-3
+            h1.display-4.m-b-2 Sign Up  
+
+            // register form
+            form(method='POST' action='/register')
+
+              div.materialize-red-text.text-darken-2
+                label(for='name') Name:
+                input#name.form-control(type='text', placeholder='first and last' name='name')
+
+              div.form-group
+                label(for='email') Email:
+                input#email.form-control(type='email', placeholder='name@email.com' name='email')
+
+              div.form-group
+                label(for='email') Repeat Email:
+                input#email.form-control(type='email', placeholder='name@email.com' name='email')
+
+              div.form-group
+                label(for='pw') Password:
+                input#pw.form-control(type='password', placeholder='§ $ % &, 0-9, a-z', name='password')
+
+              div.form-group
+                label(for='pw2') Confirm Password:
+                input#pw2.form-control(type='password', placeholder='§ $ % &, 0-9, a-z', name='confirmPassword')
+              a.waves-effect.waves-light.btn(type="submit") Sign Up
+
+include _script.pug
+include _footer.html
