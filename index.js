@@ -19,14 +19,14 @@ app.get("/", function(req, res){ //diese funktion nennt sich callback
 	// var compileFunction = pug.compileFile('./pages/index.pug');
 	// var html = compileFunction(data);
 	// res.send(html); //der ganze backend scheiß
-	
+
 });
 
-app.get("/signin", function(req, res){ 
+app.get("/signin", function(req, res){
 	var data = {signIn: 0};
 	res.render(__dirname+'/pages/index', {data:data});
 });
-app.get("/register", function(req, res){ 
+app.get("/register", function(req, res){
 	var data = {signIn: 1};
 	res.render(__dirname+'/pages/index', {data:data});
 
@@ -49,7 +49,7 @@ app.get("/findcompany", function(req, res){
             p  #{list}
             p
               input(type ='text')
-              if (list=="Company Name") 
+              if (list=="Company Name")
 	res.render(__dirname+'/pages/FindCompany', {data:data});*/
 	var html = pug.renderFile('./pages/FindCompany.pug');
 	res.send(html);
@@ -95,17 +95,6 @@ app.get("/impressum", function(req, res){
 
 app.get("/register", function(req, res){
 	var html = pug.renderFile('./pages/register.pug');
-	res.send(html);
-});
-
-<<<<<<< HEAD
-app.get("/playaround", function(req, res){
-	var html = pug.renderFile('./pages/playaround.pug');
-=======
-
-/*app.get("/test", function(req, res){
-	var html = pug.renderFile('./pages/test.pug');
->>>>>>> 95072832be50c856b3a9fb68beccf3c5730a251a
 	res.send(html);
 });
 
