@@ -26,16 +26,20 @@ app.get("/signin", function(req, res){
 	var data = {signIn: 0};
 	res.render(__dirname+'/pages/index', {data:data});
 });
-app.get("/register", function(req, res){
-	var data = {signIn: 1};
-	res.render(__dirname+'/pages/index', {data:data});
 
-	var compileFunction = pug.compileFile('./pages/index.pug');
-	var data = {name: "Ina Asra Shofa"};
-	var html = compileFunction(data);
-	res.send(html); //backend&co
+//there is Something wrong with the code, you can´t use "register" because this is the name of my page
+//dublicate root definition for register
 
-});
+// app.get("/register", function(req, res){
+// 	var data = {signIn: 1};
+// 	res.render(__dirname+'/pages/index', {data:data});
+//
+// 	var compileFunction = pug.compileFile('./pages/index.pug');
+// 	var data = {name: "Ina Asra Shofa"};
+// 	var html = compileFunction(data);
+// 	res.send(html); //backend&co
+//
+// });
 
 app.get("/findcompany", function(req, res){
 	/*var data = {
