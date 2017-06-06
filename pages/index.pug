@@ -1,10 +1,52 @@
-head
-title main menu
-link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
-script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js')
+head 
+include _head.pug
 
 body
-  h1(class='center-align blue-text text-darken-3') Businessbook
+    h1(class='center-align blue-text text-darken-3') Businessbook
+    div(class='blue-text text-darken-3 row center-allign')
+        div(class='col s4 center-align primary-background-color section' style={'width':'25vw','height':'25vw'})
+            case data.signIn
+                when 0
+                    input(placeholder='username' type='text')
+                    input(placeholder='password' type='password')
+                    //p forgot your password?
+                    a(href='/login')
+                        p register
+                when 1
+                    h3 Hello, #{username}
+                default
+                    a(href='/signin') 
+                        h3 Sign in / Register
+        div(class='col s4 center-align yellow section materialboxed' style={'width':'25vw','height':'25vw'}) 
+            h3 Search
+            form
+                div(class='input-field')
+                input(id='search' type='search' required)
+                label(class='label-icon' for='search')
+                i(class='material-icons')
+                    search
+                i(class='material-icons')
+                    close
+                a(href='/FindRandom')
+                    p advanced
+        div(class='col s4 center-align green' style={'width':'25vw','height':'25vw'}) 
+            a(href='https://www.wikiwand.com/de/Business')
+                h3 Knowledge Page
+
+    div(class='blue-text text-darken-3 row')      
+        div(class='col s4 center-align red darken-2' style={'width':'25vw','height':'25vw'}) 
+            //a(href='add page link here')
+            h3 Event Calendar
+        div(class='col s4 center-align blue lighten-4' style={'width':'25vw','height':'25vw'}) 
+            //a(href='add page link here')    
+            h3 Browse Company
+
+    //static pages
+    div(class='blue-text darken-3')
+        p contact us
+        p FAQs
+
+h1(class='center-align blue-text text-darken-3') Businessbook
   div(class='blue-text text-darken-3 row center-allign')
     div(class='col s4 center-align red section' style={'width':'25vw','height':'25vw'})
       case signIn
@@ -34,6 +76,13 @@ body
     p contact us
     p FAQs
 
+<<<<<<< HEAD
+=======
+  p1 Shofa
+
+footer
+include _footer.pug
+>>>>>>> 95072832be50c856b3a9fb68beccf3c5730a251a
 //-clicked
   when 0 
     h3 username

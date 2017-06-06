@@ -3,24 +3,78 @@ doctype html
 html
     head
         title Search Company
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+                    
     body
         h1 Business Book (logo)
     
-        nav
-         li
-             a(href='/findcompany') Company 
-         li
-             a(href='/findpeople') People
-         li
-            a(href='/findrandom') Random
-        hr
+        nav.nav-extended
+            div.nav-content            
+                ul.tabs.tabs-transparent
+                    li.tab
+                        a(href='/findcompany') Company 
+                    li.tab
+                        a(href='/findpeople') People
+                    li.tab
+                        a(href='/findrandom') Random
+                            
 
-    p #{data.message}
-        each list in data.lists
-            p  #{list}
-            p
-              input(type ='text')
-              if (list=="Company Name") 
-                  
-                    
+        form.col.s6
+            div.row
+                input.col.s7.push-s5(placeholder='Name',type ='text') 
+                h5.col.s5.pull-s7 Company Name
+                
+            div.row 
+                select.browser-default.col.s7.push-s5
+                        option(value='', disabled='', selected='') Choose your option
+                        option(value='1') Option 1
+                        option(value='2') Option 2
+                        option(value='3') Option 3
+                h5.col.s5.pull-s7 Company Field
+                
+                
+            div.row 
+                input.col.s7.push-s5(placeholder='Age', type ='text')
+                h5.col.s5.pull-s7 Company Age
+        
+            div.row 
+                div.col.s12.m5
+                    h5 Foundet  
+                div.col.s12.m6.l3
+                    a.waves-effect.waves-light.btn before   
+                    a.waves-effect.waves-light.btn in
+                    a.waves-effect.waves-light.btn after
+                div.col.s12.m6.l3                   
+                    input(placeholder='Placeholder', type ='text')
+                 
+
+                
+            div.row 
+                input.col.s7.push-s5(placeholder='town', type ='text') 
+                h5.col.s5.pull-s7 Area
+                
+        div.row                    
+            a.waves-effect.waves-light.btn.right Search
+
+
+
+        
+
+
+    footer
+        include _script.pug
+        include _footer.html
+    
+//- nav.nav-extended
+    div.nav-content            
+    ul.tabs.tabs-transparent
+    li.tab
+    a(href='#test1') Company 
+    li.tab
+    a(href='#people') People
+    li.tab
+    a(href='#random') Random
+    #test1.col.s12 Company
+    #test1.col.s12 People
+    #test1.col.s12 Random-//
