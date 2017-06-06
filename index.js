@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var pug = require("pug");
 
-app.use("/assets", express.static(__dirname+"/assets"));
+app.use(express.static(__dirname+"/assets"));
 app.engine('pug',require('pug').__express);
 app.set('view engine','pug');
 
