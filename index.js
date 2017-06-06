@@ -63,10 +63,10 @@ app.get("/register", function(req, res){
 	res.send(html);
 });
 
-/*app.get("/test", function(req, res){
-	var html = pug.renderFile('./pages/test.pug');
+app.get("/playaround", function(req, res){
+	var html = pug.renderFile('./pages/playaround.pug');
 	res.send(html);
-});*/
+});
 
 app.listen(3000, function(){
 	console.log("bla bla port 3000")
