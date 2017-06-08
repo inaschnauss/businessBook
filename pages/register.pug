@@ -11,7 +11,7 @@ html(lang="en")
       div.container
         div.row
           .col-md-6.col-md-offset-3
-            h1.display-4.m-b-2 Sign Up  
+            h3.display-4.m-b-2 Sign Up  
 
             // register form
             form(method='POST' action='/register')
@@ -20,22 +20,32 @@ html(lang="en")
                 label(for='name') Name:
                 input#name.form-control(type='text', placeholder='first and last' name='name')
 
+              div.input-field.col-s6
+                input#name2(type="text") 
+                //placeholder='first and last')
+                label(for="name2") Enter name   
+
               div.form-group
                 label(for='email') Email:
                 input#email.form-control(type='email', placeholder='name@email.com' name='email')
 
               div.form-group
                 label(for='email') Repeat Email:
-                input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                input#cofirm-email.form-control(type='email', placeholder='name@email.com' name='email')
 
               div.form-group
                 label(for='pw') Password:
-                input#pw.form-control(type='password', placeholder='§ $ % &, 0-9, a-z', name='password')
+                input#password.form-control(type='password', placeholder='§ $ % &, 0-9, a-z', name='password')
 
               div.form-group
                 label(for='pw2') Confirm Password:
-                input#pw2.form-control(type='password', placeholder='§ $ % &, 0-9, a-z', name='confirmPassword')
-              a#sign-up-button.waves-effect.waves-light.btn(type="submit") Sign Up
+                input#confirm-password.form-control(type='password', placeholder='§ $ % &, 0-9, a-z', name='confirmPassword')
+
+              a#sign-up-button.btn.waves-effect.waves-light(type="submit", name="action") Sign Up
+                i.material-icons send
+
+
+
   footer
     include _footer.html
     include _script.pug
