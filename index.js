@@ -95,10 +95,13 @@ app.get("/impressum", function(req, res){
 	res.send(html);
 });
 
-
-
 app.get("/register", function(req, res){
 	var html = pug.renderFile('./pages/register.pug');
+	res.send(html);
+});
+
+app.get("/calendar", function(req, res){
+	var html = pug.renderFile('./pages/calendar.pug');
 	res.send(html);
 });
 
