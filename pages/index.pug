@@ -3,8 +3,12 @@ include _head.pug
 
 body
   h1(class='center-align blue-text text-darken-3') Businessbook
-  div(class='blue-text text-darken-3 row center-allign')
-    div(class='col s4 center-align primary-background-color section' style={'width':'25vw','height':'25vw'})
+  
+  //menu
+  div(class='text-darken-3 row center-allign')
+    div(class='col s4 center-align section')
+      img(class='col s4 center-align section' src='images/bb_logo.jpg' alt='logo' style={'width':'25vw','height':'25vw'})
+    div(class='col s4 center-align red section' style={'width':'25vw','height':'25vw'})
       case data.signIn
         when 0
           input(placeholder='username' type='text')
@@ -31,9 +35,7 @@ body
           p advanced
     div(class='col s4 center-align green' style={'width':'25vw','height':'25vw'}) 
       a(href='https://www.wikiwand.com/de/Business')
-        h3 Knowledge Page
-
-  div(class='blue-text text-darken-3 row')      
+        h3 Knowledge Page     
     div(class='col s4 center-align red darken-2' style={'width':'25vw','height':'25vw'}) 
       //a(href='add page link here')
       h3 Event Calendar
