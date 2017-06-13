@@ -13,15 +13,21 @@ link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='styles
 //customize stylesheet
 link(href="stylesheet/style.css", type="text/css", rel="stylesheet")
 
+script.
+  $(document).ready(function(){
+  $.scrollTo($('#scroll'), 1000);
+  });
+
+
 body
   //top-banner
-  div(class='cyan lighten-2' style='height: 100%;')
+  div(class='cyan lighten-2' style='height: 100%;' onload='myFunction()')
     h1(class='center-align brown-text text-darken-2' style='line-height: 50vw;')
       | 
       span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
       | u s i n e s s b o o k
-      
-  div(class='blue-text text-darken-3 row center-allign')
+  
+  div(class='blue-text text-darken-3 row center-allign' id='scroll')
     div(class='col s4 center-align primary-background-color section' style={'width':'25vw','height':'25vw'})
       case data.signIn
         when 0
