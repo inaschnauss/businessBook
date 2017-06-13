@@ -12,7 +12,7 @@ body
   //menu
   div(class='brown lighten-5 row center-allign container')
     img(class='col s4' src='images/bb_logo.jpg' alt='logo' style={'width':'20vw','height':'20vw'})
-    div(class='col s4 center-align red section' style={'width':'20vw','height':'20vw'})
+    div(class='col s4 center-align orange lighten-3 section' style={'width':'20vw','height':'20vw'})
       case data.signIn
         when 0
           input(placeholder='username' type='text')
@@ -25,7 +25,7 @@ body
         default
           a(href='/signin') 
             h3 Sign in / Register
-    div(class='col s4 center-align yellow section materialboxed' style={'width':'20vw','height':'20vw'}) 
+    div(class='col s4 center-align brown darken-2 section' style={'width':'20vw','height':'20vw', 'float':'right'}) 
       h3 Search
       form
         div(class='input-field')
@@ -37,13 +37,13 @@ body
           close
         a(href='/FindRandom')
           p advanced
-    div(class='col s4 center-align green' style={'width':'20vw','height':'20vw'}) 
+    div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw'}) 
       a(href='https://www.wikiwand.com/de/Business')
         h3 Knowledge Page     
-    div(class='col s4 center-align red darken-2' style={'width':'20vw','height':'20vw'}) 
+    div(class='col s4 center-align cyan lighten-2' style={'width':'20vw','height':'20vw'}) 
       //a(href='add page link here')
       h3 Event Calendar
-    div(class='col s4 center-align blue lighten-4' style={'width':'20vw','height':'20vw'}) 
+    div(class='col s4 center-align orange lighten-3' style={'width':'20vw','height':'20vw'}) 
       //a(href='add page link here')    
       h3 Browse Company
 
