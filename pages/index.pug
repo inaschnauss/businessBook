@@ -1,9 +1,33 @@
 head 
-include _head.pug
+meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+//- Let browser know website is optimized for mobile
+meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+
+//CSS
+link(href="stylesheet/lib/materialize.min.css", type="text/css", rel="stylesheet")
+//link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
+
+//Import Google Icon Font
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet', type='text/css')
+
+//customize stylesheet
+link(href="stylesheet/style.css", type="text/css", rel="stylesheet")
+
+script.
+  $(document).ready(function(){
+  $.scrollTo($('#scroll'), 1000);
+  });
+
 
 body
-  h1(class='center-align blue-text text-darken-3') Businessbook
-  div(class='blue-text text-darken-3 row center-allign')
+  //top-banner
+  div(class='cyan lighten-2' style='height: 100%;' onload='myFunction()')
+    h1(class='center-align brown-text text-darken-2' style='line-height: 50vw;')
+      | 
+      span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
+      | u s i n e s s b o o k
+  
+  div(class='blue-text text-darken-3 row center-allign' id='scroll')
     div(class='col s4 center-align primary-background-color section' style={'width':'25vw','height':'25vw'})
       case data.signIn
         when 0
