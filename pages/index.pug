@@ -19,6 +19,11 @@ script.
   });
 
 
+style.
+  body {
+  background-color: #efebe9
+  }
+
 body
   //top-banner
   div(class='cyan lighten-2' style='height: 100%;' onload='myFunction()')
@@ -27,8 +32,10 @@ body
       span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
       | u s i n e s s b o o k
   
-  div(class='blue-text text-darken-3 row center-allign' id='scroll')
-    div(class='col s4 center-align primary-background-color section' style={'width':'25vw','height':'25vw'})
+  //menu
+  div(class='brown lighten-5 row center-allign container')
+    img(class='col s4' src='images/bb_logo.jpg' alt='logo' style={'width':'20vw','height':'20vw'})
+    div(class='col s4 center-align orange lighten-3 section' style={'width':'20vw','height':'20vw'})
       case data.signIn
         when 0
           input(placeholder='username' type='text')
@@ -41,7 +48,7 @@ body
         default
           a(href='/signin') 
             h3 Sign in / Register
-    div(class='col s4 center-align yellow section materialboxed' style={'width':'25vw','height':'25vw'}) 
+    div(class='col s4 center-align brown darken-2 section' style={'width':'20vw','height':'20vw', 'float':'right'}) 
       h3 Search
       form
         div(class='input-field')
@@ -53,15 +60,13 @@ body
           close
         a(href='/FindRandom')
           p advanced
-    div(class='col s4 center-align green' style={'width':'25vw','height':'25vw'}) 
+    div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw'}) 
       a(href='https://www.wikiwand.com/de/Business')
-        h3 Knowledge Page
-
-  div(class='blue-text text-darken-3 row')      
-    div(class='col s4 center-align red darken-2' style={'width':'25vw','height':'25vw'}) 
+        h3 Knowledge Page     
+    div(class='col s4 center-align cyan lighten-2' style={'width':'20vw','height':'20vw'}) 
       //a(href='add page link here')
       h3 Event Calendar
-    div(class='col s4 center-align blue lighten-4' style={'width':'25vw','height':'25vw'}) 
+    div(class='col s4 center-align orange lighten-3' style={'width':'20vw','height':'20vw'}) 
       //a(href='add page link here')    
       h3 Browse Company
 
@@ -69,38 +74,6 @@ body
   div(class='blue-text darken-3')
     p contact us
     p FAQs
-
-h1(class='center-align blue-text text-darken-3') Businessbook
-  div(class='blue-text text-darken-3 row center-allign')
-    div(class='col s4 center-align red section' style={'width':'25vw','height':'25vw'})
-      case signIn
-        default
-          h3 Sign in / 
-          h3 Register
-    div(class='col s4 center-align yellow section' style={'width':'25vw','height':'25vw'}) 
-      h3 Search
-      if hover
-        p search
-        //img search.jpg
-      p advanced
-    div(class='col s4 center-align green' style={'width':'25vw','height':'25vw'}) 
-      h3 Knowledge
-      h3 Page
-
-  div(class='blue-text text-darken-3 row')      
-    div(class='col s4 center-align red darken-2' style={'width':'25vw','height':'25vw'}) 
-      h3 Event 
-      h3 Calendar
-    div(class='col s4 center-align blue lighten-4' style={'width':'25vw','height':'25vw'}) 
-      h3 Browse 
-      h3 Company
-
-  //static pages
-  div(class='blue-text darken-3')
-    p contact us
-    p FAQs
-
-  p1 Shofa
 
 footer
 include _footer.pug
