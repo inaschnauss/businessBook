@@ -11,11 +11,12 @@ main.green.accent-1
       h5.col.s5.pull-s7 Company Name
 
     div.input-field.row 
-      select.browser-default.col.s7.push-s5
-        option(value='', disabled='', selected='') Choose your option
-        option(value='1') Option 1
-        option(value='2') Option 2
-        option(value='3') Option 3
+      div.browser-default.col.s7.push-s5
+        select
+          option(value='', disabled='', selected='') choose your option
+          option(value='1') Option 1
+          option(value='2') Option 2
+          option(value='3') Option 3
       h5.col.s5.pull-s7 Company Field
 
 
@@ -40,6 +41,7 @@ main.green.accent-1
       h5.col.s5.pull-s7 Area
 
   div.row                    
-    a.waves-effect.waves-light.btn.right Search
+    a.waves-effect.waves-light.btn.right Search 
+      i.material-icons search
 
 include _footer.pug

@@ -11,3 +11,8 @@ $( document ).ready(function() {
         })
     })
 })
+
+//Dropdown option search
+$(document).ready(function() {
+    $('select').material_select();
+  });
