@@ -1,5 +1,18 @@
 head 
-include _head.pug
+meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+//- Let browser know website is optimized for mobile
+meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+
+//CSS
+link(href="stylesheet/lib/materialize.min.css", type="text/css", rel="stylesheet")
+//link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
+
+//Import Google Icon Font
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet', type='text/css')
+
+//customize stylesheet
+link(href="stylesheet/style.css", type="text/css", rel="stylesheet")
+
 
 style.
   body {
@@ -7,7 +20,12 @@ style.
   }
 
 body
-  h1(class='center-align blue-text text-darken-3') Businessbook
+  //top-banner
+  div(class='cyan lighten-2' style='height: 100%;' onload='myFunction()')
+    h1(class='center-align brown-text text-darken-2' style='line-height: 50vw;')
+      | 
+      span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
+      | u s i n e s s b o o k
   
   //menu
   div(class='brown lighten-5 row center-allign container')
@@ -18,7 +36,7 @@ body
           input(placeholder='username' type='text')
           input(placeholder='password' type='password')
           //p forgot your password?
-          a(href='/login')
+          a(href='/register')
             p register
         when 1
           h3 Hello, #{username}
@@ -35,7 +53,7 @@ body
           search
         i(class='material-icons')
           close
-        a(href='/FindRandom')
+        a(href='/FindCompany')
           p advanced
     div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw'}) 
       a(href='https://www.wikiwand.com/de/Business')
@@ -52,8 +70,13 @@ body
     p contact us
     p FAQs
 
-footer
+
 include _footer.pug
+
+script.
+  $(document).ready(function(){
+  $.scrollTo($('#scroll'), 1000);
+  });
 
 //-clicked
   when 0 

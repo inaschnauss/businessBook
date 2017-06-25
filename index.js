@@ -1,3 +1,4 @@
+
 var express = require('express');
 var app = express();
 var pug = require("pug");
@@ -62,9 +63,8 @@ app.get("/findcompany", function(req, res){
 /*var html = pug.renderFile('./template/FindCompanyPage.pug');
 res.send(html);*/
 
-app.get("/findcompany#people", function(req, res){
-	var html = pug.renderFile('./pages/FindPeople.pug');
-	res.send(html);
+app.get("/findpeople", function(req, res){
+	res.render(__dirname+'/pages/FindPeople.pug')
 });
 
 app.get("/findrandom", function(req, res){
