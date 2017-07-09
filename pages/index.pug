@@ -30,12 +30,13 @@ body
   //menu
   div(class='brown lighten-5 row center-allign container' style='height: 100%;')
     div(class='col s12' style='height: 13%')
-    img(class='col s4' src='images/bb_logo.jpg' alt='logo' style={'width':'20vw','height':'20vw'})
-    div(class='col s4 center-align orange lighten-3' style={'width':'20vw','height':'20vw'})
+    img(class='col s4' id='logomenu' src='images/bb_logo.jpg' alt='logo' style={'width':'20vw','height':'20vw'})
+    div(class='col s4 center-align orange lighten-3' style={'width':'20vw','height':'20vw', 'padding':'30px','border-bottom-color':'red'})
       case data.signIn
         when 0
-          input(placeholder='username' type='text')
-          input(placeholder='password' type='password')
+          input(placeholder='Username' type='text')
+          input(placeholder='Password' type='password')
+          button.btn.btn-small.waves-effect.cyan.lighten-2(type='submit') Login
           //p forgot your password?
           a(href='/register')
             p register
@@ -44,7 +45,7 @@ body
         default
           a(href='/signin') 
             h3 Sign in / Register
-    div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw', 'float':'right'}) 
+    div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw'}) 
       h3 Search
       form
         div(class='input-field')
@@ -73,6 +74,7 @@ body
 
 
 include _footer.pug
+include _script.pug
 
 script.
   $(document).ready(function(){
