@@ -29,45 +29,68 @@ body
       a(href='javascript:smoothScroll()') 
         i(class='material-icons') keyboard_arrow_down
   
-  //menu
-  div(class='brown lighten-5' id='menudiv' style='height: 100%;')
-    div(class='row container' style={'margin-top':'15vw'})
-      img(class='col s12 m6 l3 ' id='logomenu' src='images/bb_logo.jpg' alt='logo'  style={'width':'20vw','height':'20vw'})
-      div(class='col s12 m6 l3 center-align orange lighten-3'  style={'width':'20vw','height':'20vw'})
-        case data.signIn
-          when 0
-            input(placeholder='Username' type='text')
-            input(placeholder='Password' type='password')
-            button.btn.btn-small.waves-effect.cyan.lighten-2(type='submit') Login
-            //p forgot your password?
-            a(href='/register')
-              p register
-          when 1
-            h3 Hello, #{username}
-          default
-            a(href='/signin#menudiv') 
-              h3 Sign in / Register
-      div(class='col s12 m6 l3 center-align brown darken-2'  style={'width':'20vw','height':'20vw'}) 
-        h3 Search
-        form
-          div(class='input-field')
-          input(id='search' type='search' required)
-          label(class='label-icon' for='search')
-          i(class='material-icons')
-            search
-          i(class='material-icons')
-            close
-          a(href='/FindRandom' class='center-align')
-            p advanced
-      div(class='col s12 m6 l3 offset-l1 center-align brown darken-2'  style={'width':'20vw','height':'20vw'}) 
-        a(href='https://www.wikiwand.com/de/Business')
-          h3 Knowledge Page 
-      div(class='col s12 m6 l3 offset-l1 center-align cyan lighten-2 container'  style={'width':'20vw','height':'20vw'}) 
-        a(href='/calendar')
-          h3 Event Calendar
-      div(class='col s12 m6 l3 offset-l1 center-align orange lighten-3' style={'width':'20vw','height':'20vw'}) 
-        //a(href='add page link here')    
-        h3 Browse Company
+  //menu      
+  div(class='brown lighten-5 container' id='menudiv' style='height: 100%;')
+    .square
+      .content
+        .table
+          .table-cell
+            img(class='rs' id='logomenu' src='images/bb_logo.jpg' alt='logo')
+    .square
+      .content.orange.lighten-3
+        .table
+          .table-cell
+            div(class='center-align')
+              case data.signIn
+                when 0
+                  input(placeholder='Username' type='text')
+                  input(placeholder='Password' type='password')
+                  button.btn.btn-small.waves-effect.cyan.lighten-2(type='submit') Login
+                  //p forgot your password?
+                  a(href='/register')
+                    p register
+                when 1
+                  h3 Hello, #{username}
+                default
+                  a(href='/signin#menudiv') 
+                    h3 Sign in / Register
+    .square
+      .content.brown.darken-2
+        .table
+          .table-cell
+            div(class='center-align' ) 
+              h3 Search
+              form
+                div(class='input-field')
+                input(id='search' type='search' required)
+                label(class='label-icon' for='search')
+                i(class='material-icons')
+                  search
+                i(class='material-icons')
+                  close
+                a(href='/FindRandom' class='center-align')
+                  p advanced
+    .square.brown.darken-2
+      .content
+        .table
+          .table-cell
+            div(class='center-align') 
+              a(href='https://www.wikiwand.com/de/Business')
+                h3 Knowledge Page 
+    .square.cyan.lighten-2
+      .content
+        .table
+          .table-cell
+            div(class='center-align container') 
+              a(href='/calendar')
+                h3 Event Calendar
+    .square.orange.lighten-3
+      .content
+        .table
+          .table-cell
+            div(class='center-align') 
+              //a(href='add page link here')    
+              h3 Browse Company
 
   //static pages
   div(class='blue-text darken-3')
