@@ -25,46 +25,72 @@ body
     h1(class='center-align brown-text text-darken-2' style='line-height: 50vw;')
       | 
       span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
-      | u s i n e s s b o o k
+      | u s i n e s s b o o k 
+      a(href='javascript:smoothScroll()') 
+        i(class='material-icons') keyboard_arrow_down
   
-  //menu
-  div(class='brown lighten-5 row center-allign container' style='height: 100%;')
-    div(class='col s12' style='height: 13%')
-    img(class='col s4' src='images/bb_logo.jpg' alt='logo' style={'width':'20vw','height':'20vw'})
-    div(class='col s4 center-align orange lighten-3' style={'width':'20vw','height':'20vw'})
-      case data.signIn
-        when 0
-          input(placeholder='username' type='text')
-          input(placeholder='password' type='password')
-          //p forgot your password?
-          a(href='/register')
-            p register
-        when 1
-          h3 Hello, #{username}
-        default
-          a(href='/signin') 
-            h3 Sign in / Register
-    div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw', 'float':'right'}) 
-      h3 Search
-      form
-        div(class='input-field')
-        input(id='search' type='search' required)
-        label(class='label-icon' for='search')
-        i(class='material-icons')
-          search
-        i(class='material-icons')
-          close
-        a(href='/FindRandom' class='center-align')
-          p advanced
-    div(class='col s4 center-align brown darken-2' style={'width':'20vw','height':'20vw'}) 
-      a(href='https://www.wikiwand.com/de/Business')
-        h3 Knowledge Page     
-    div(class='col s4 center-align cyan lighten-2 container' style={'width':'20vw','height':'20vw'}) 
-      a(href='/calendar')
-        h3 Event Calendar
-    div(class='col s4 center-align orange lighten-3' style={'width':'20vw','height':'20vw'}) 
-      //a(href='add page link here')    
-      h3 Browse Company
+  //menu      
+  div(class='brown lighten-5 container' id='menudiv' style='height: 100%;')
+    .square
+      .content
+        .table
+          .table-cell
+            img(class='rs' id='logomenu' src='images/bb_logo.jpg' alt='logo')
+    .square
+      .content.orange.lighten-3
+        .table
+          .table-cell
+            div(class='center-align')
+              case data.signIn
+                when 0
+                  input(placeholder='Username' type='text')
+                  input(placeholder='Password' type='password')
+                  button.btn.btn-small.waves-effect.cyan.lighten-2(type='submit') Login
+                  //p forgot your password?
+                  a(href='/register')
+                    p register
+                when 1
+                  h3 Hello, #{username}
+                default
+                  a(href='/signin#menudiv') 
+                    h3 Sign in / Register
+    .square
+      .content.brown.darken-2
+        .table
+          .table-cell
+            div(class='center-align' ) 
+              h3 Search
+              form
+                div(class='input-field')
+                input(id='search' type='search' required)
+                label(class='label-icon' for='search')
+                i(class='material-icons')
+                  search
+                i(class='material-icons')
+                  close
+                a(href='/FindRandom' class='center-align')
+                  p advanced
+    .square.brown.darken-2
+      .content
+        .table
+          .table-cell
+            div(class='center-align') 
+              a(href='https://www.wikiwand.com/de/Business')
+                h3 Knowledge Page 
+    .square.cyan.lighten-2
+      .content
+        .table
+          .table-cell
+            div(class='center-align container') 
+              a(href='/calendar')
+                h3 Event Calendar
+    .square.orange.lighten-3
+      .content
+        .table
+          .table-cell
+            div(class='center-align') 
+              //a(href='add page link here')    
+              h3 Browse Company
 
   //static pages
   div(class='blue-text darken-3')
@@ -74,13 +100,19 @@ body
 
 include _footer.pug
 include _script.pug
+//<<<<<<< feauture/main-sign-in
+//=======
 
+//>>>>>>> develop
 
 script.
   $(document).ready(function(){
-  $.scrollTo($('#scroll'), 1000);
+    console.log("test");
   });
-
+  function smoothScroll(){
+    console.log("hello");
+    $.scrollTo($('#menudiv'), 500);
+  }
 //-clicked
   when 0 
     h3 username
