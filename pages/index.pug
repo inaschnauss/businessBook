@@ -39,24 +39,29 @@ body
     .square
       .content.orange.lighten-3
         .table
-          .table-cell
-            div(class='center-align')
-              case data.signIn
-                when 0
-                  input(placeholder='Username' type='text')
-                  input(placeholder='Password' type='password')
-                  a(href='/profilemain#menudiv')
-                    button.btn.btn-small.waves-effect.cyan.lighten-2 Login
-                  //(type='submit')
-                  //p forgot your password?
-                  a(href='/register')
-                    p register
-                when 1
-                  h5 Hello, Shofa!
-                  i.material-icons.large account_circle
-                default
-                  a(href='/signin#menudiv') 
-                    h3 Sign in / Register
+          .table-cell.center-align
+            case data.signIn
+              when 0
+                input(placeholder='Username' type='text')
+                input(placeholder='Password' type='password')
+                a(href='/profilemain#menudiv')
+                  button.btn.btn-small.waves-effect.cyan.lighten-2 Login
+                //(type='submit')
+                //p forgot your password?
+                a(href='/register')
+                  p register
+              when 1
+                h4.left Hello, Shofa!
+                i.material-icons.large account_circle
+                br
+                page
+                |
+                i.material-icons.small chat_bubble_outline
+                |edit profile
+                p log out
+              default
+                a(href='/signin#menudiv') 
+                  h3 Sign in / Register
     .square
       .content.brown.darken-2
         .table
