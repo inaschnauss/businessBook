@@ -32,7 +32,7 @@ body
   //menu      
   div(class='brown lighten-5 container' id='menudiv' style='height: 100%;')
     .square
-      .content
+      .content#logomenu
         .table
           .table-cell
             img(class='rs' id='logomenu' src='images/bb_logo.jpg' alt='logo')
@@ -45,12 +45,15 @@ body
                 when 0
                   input(placeholder='Username' type='text')
                   input(placeholder='Password' type='password')
-                  button.btn.btn-small.waves-effect.cyan.lighten-2(type='submit') Login
+                  a(href='/profilemain#menudiv')
+                    button.btn.btn-small.waves-effect.cyan.lighten-2 Login
+                  //(type='submit')
                   //p forgot your password?
                   a(href='/register')
                     p register
                 when 1
-                  h3 Hello, #{username}
+                  h5 Hello, Shofa!
+                  i.material-icons.large account_circle
                 default
                   a(href='/signin#menudiv') 
                     h3 Sign in / Register
