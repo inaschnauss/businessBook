@@ -55,3 +55,11 @@ main{
     background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
     color:#fff;
 }
+
+.footer-tabs{
+    background-color: #ffcc80;
+}
+
+a.footer-tabs {
+    color: #5d4037 !important;
+}
