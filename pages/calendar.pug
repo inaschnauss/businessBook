@@ -1,65 +1,68 @@
 include _head.pug
+link(href="stylesheet/calendar.css", type="text/css", rel="stylesheet")
 
-//include calendar.html
+div.brown.lighten-5
+  div.container
+    div.month.cyan.lighten-2
+      ul
+        li.prev &#x276E;
+        li.next &#x276F;
+        li#fontstyleMonth July
+        li#fontstyleYear 2017
+        br
+        br
+      ul.weekdays
+        li Mo
+        li Tu
+        li We
+        li Th
+        li Fr
+        li Sa
+        li So
+      ul.days
+        li
+        li
+        li
+        li
+        li
+        li 1
+        li 2
+        li 3
+        li 4
+        li 5
+        li 6
+        li 7
+        li 8
+        li 9
+        li 10
+        li 11
+        li 12
+        li 13
+        li 14
+        li 15
+        li 16
+        li 17
+        li 18
+        li 19
+        li 20
+        li 21
+        li 22
+        li 23
+        li 24
+        li 25
+        li 26
+        li 27
+        li.active 28
+        li 29
+        li 30
+        li 31
+  div.dropdown#eventView
+    button.dropbtn Dropdown
+    //.dropdown-button Dropdown
+    div.dropdown-content
+      a(href="#")#nrOne 1      
+      a(href="#")#nrTwo 2  
+      a(href="#")#nrThree 3
 
-div.container
-  //- div.month
-  //-   ul
-  //-     li.prev &#10094;
-  //-     li.next &#10095;
-  //-     li August
-  //-     li 2016
-
-  h3.font(size='3', face='Tahoma') June 2017
-  table.highlight.bordered.centered.responsive-table
-    //(border='1', bordercolor='#9575cd', cellspacing='0', cellpadding='0', align='center')
-    thead
-      tr
-        th.font(weight="600") Mon
-        th.font(size='3', face='Tahoma') Tue
-        th.font(size='3', face='Tahoma') Wed
-        th.font(size='3', face='Tahoma') Thu
-        th.font(size='3', face='Tahoma') Fri
-        th.font(size='3', face='Tahoma') Sat
-        th.font(size='3', face='Tahoma') Sun
-    tbody
-      tr
-        td
-        td
-        td
-        td 1
-        td 2
-        td 3
-        td 4
-      tr
-        td 5
-        td 6
-        td 7
-        td 8
-        td 9
-        td 10
-        td 11
-      tr
-        td 12
-        td 13
-        td 14
-        td 15
-        td 16
-        td 17
-        td 18
-      tr
-        td 19
-        td 20
-        td 21
-        td 22
-        td 23
-        td 24
-        td 25
-      tr
-        td 26
-        td 27
-        td 28
-        td 29
-        td 30
-        td
-        td
+  div.sidenav#mySidenav
+    a(href="")#about about
