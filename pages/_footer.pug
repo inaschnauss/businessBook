@@ -3,12 +3,17 @@ footer.page-footer.orange.lighten-3
     ul.tabs.orange.lighten-3
       //.blue
       li.tab.col.s1.right
-        a.footer-tabs(href='#faqs') FAQs
+        a.brown-text.darken-2(href='#faqs') FAQs
       li.tab.col.s2.right
-        a.footer-tabs(href='#contactus') Contact Us
+        a.brown-text.darken-2(href='#contactus') Contact Us
       li.tab.col.s2.right
-        a.active.footer-tabs © 2017 BusinessBook. All Right Reserved.
-  #contactus.col.s12.container  
+        a.active.brown-text.darken-2 © 2017 BusinessBook
+      div.indicator.cyan.lighten-2 
+
+      //a(href='javascript:smoothScroll()') 
+        i(class='material-icons') keyboard_arrow_down
+  
+  #contactus.col.s12.container(style='height: 100%;')
     div.row
       h3 Contact Us  
       div.col.s12(style='height: 2%')
@@ -35,7 +40,7 @@ footer.page-footer.orange.lighten-3
 
         a#sign-up-button.btn.waves-effect.waves-light(type="submit", name="action") Sign Up
           i.material-icons send
-  #faqs.col.s12.container
+  #faqs.col.s12.container(style='height: 100%;')
     h4 Frequently Asked Questions
     div.col.s12(style='height: 2%')
     h5 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
