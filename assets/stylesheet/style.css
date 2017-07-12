@@ -26,6 +26,11 @@ main{
     position:absolute;
     height:100%; /* = 100% - 2*5% padding */
     width:100%; /* = 100% - 2*5% padding */
+    padding:10%;
+}
+
+.content#logomenu{
+    padding: 0% !important;
 }
 
 .table{
@@ -54,4 +59,8 @@ main{
     background-repeat:no-repeat;
     background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
     color:#fff;
+}
+
+.material-icons{
+    color: #5d4037;
 }

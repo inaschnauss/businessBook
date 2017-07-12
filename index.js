@@ -28,6 +28,11 @@ app.get("/signin", function(req, res){
 	res.render(__dirname+'/pages/index', {data:data});
 });
 
+app.get("/profilemain", function(req, res){
+	var data = {signIn: 1};
+	res.render(__dirname+'/pages/index', {data:data});
+});
+
 //there is Something wrong with the code, you can´t use "register" because this is the name of my page
 //dublicate root definition for register
 
