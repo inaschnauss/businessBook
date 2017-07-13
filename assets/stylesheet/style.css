@@ -7,12 +7,14 @@ body {
   display : flex;
   min-height: 100vh;
   flex-direction: column;
+  /*background-color: #ffcc80;*/
 }
 
 main{
   flex: 1 0 auto;
 }
 
+/*main page*/
 .square {
     float:left;
     position: relative;
@@ -40,7 +42,6 @@ main{
 }
 
 /*  For responsive images */
-
 .content .rs{
     width:auto;
     height:auto;
@@ -48,7 +49,6 @@ main{
     max-width:100%;
 }
 /*  For responsive images as background */
-
 .bg{
     background-position:center center;
     background-repeat:no-repeat;
