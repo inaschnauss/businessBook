@@ -1,68 +1,23 @@
 include _head.pug
+include _style.pug
 link(href="stylesheet/calendar.css", type="text/css", rel="stylesheet")
 
-div.brown.lighten-5
-  div.container
-    div.month.cyan.lighten-2
-      ul
-        li.prev &#x276E;
-        li.next &#x276F;
-        li#fontstyleMonth July
-        li#fontstyleYear 2017
-        br
-        br
-      ul.weekdays
-        li Mo
-        li Tu
-        li We
-        li Th
-        li Fr
-        li Sa
-        li So
-      ul.days
-        li
-        li
-        li
-        li
-        li
-        li 1
-        li 2
-        li 3
-        li 4
-        li 5
-        li 6
-        li 7
-        li 8
-        li 9
-        li 10
-        li 11
-        li 12
-        li 13
-        li 14
-        li 15
-        li 16
-        li 17
-        li 18
-        li 19
-        li 20
-        li 21
-        li 22
-        li 23
-        li 24
-        li 25
-        li 26
-        li 27
-        li.active 28
-        li 29
-        li 30
-        li 31
-  div.dropdown#eventView
-    button.dropbtn Dropdown
-    //.dropdown-button Dropdown
-    div.dropdown-content
-      a(href="#")#nrOne 1      
-      a(href="#")#nrTwo 2  
-      a(href="#")#nrThree 3
+link(href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css", type="text/css", rel="stylesheet")
 
-  div.sidenav#mySidenav
-    a(href="")#about about
+div.brown.lighten-5
+  div.container#calendar(style="background-color: #fff", padding: 20px)
+  //- div.dropdown#eventView
+  //-   button.dropbtn Dropdown
+  //-   //.dropdown-button Dropdown
+  //-   div.dropdown-content
+  //-     a(href="#")#nrOne 1      
+  //-     a(href="#")#nrTwo 2  
+  //-     a(href="#")#nrThree 3
+
+  //- div.sidenav#mySidenav
+  //-   a(href="")#about about
+
+//include script.js
+//include _footer.pug
+//include _footer.pug
+//include _script.pug
