@@ -1,10 +1,10 @@
-include _head.pug
-include _style.pug
+include _logoHeader.pug
+
+//Cascade Stylesheet
+link(href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css", type="text/css", rel="stylesheet")
 link(href="stylesheet/calendar.css", type="text/css", rel="stylesheet")
 
-link(href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css", type="text/css", rel="stylesheet")
-
-div.brown.lighten-5
+div
   div.container#calendar(style="background-color: #fff", padding: 20px)
   //- div.dropdown#eventView
   //-   button.dropbtn Dropdown
@@ -21,3 +21,11 @@ div.brown.lighten-5
 //include _footer.pug
 //include _footer.pug
 //include _script.pug
+
+
+//javascript
+script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js")
+script(type="text/javascript" src="js/calendar.js")
+
+include _footer.pug
