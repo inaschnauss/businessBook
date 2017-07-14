@@ -1,37 +1,51 @@
-
-
+/*Month header*/
 #calendar .fc-header-toolbar{
   padding: 70px 25px;
   width: 100%;
   background: #1abc9c;
 }
 
+#calendar .fc-left h2{
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  float: none;
+}
+
+/*Buttons*/
+#calendar .fc-right{
+
+}
+
+/*Date header*/
+#calendar .fc-head{
+  background-color: #ffcc80;
+}
+
+/*Current Date*/
+#calendar .fc-today{
+  background: #ffcc80;
+  font-weight: bold;
+}
+
+
+#calendar .fc-view-container{
+
+}
+
 
 
 ul {list-style-type: none;}
-body {
-  font-family: Verdana, sans-serif;
-  }
-
-/* Month header */
-.month {
-    padding: 70px 25px;
-    width: 100%;
-    background: #1abc9c;
-}
 
 /* Month list */
 .month ul {
     margin: 0;
     padding: 0;
-}
-
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-align: center;
 }
 
 /* Previous button inside month header */
