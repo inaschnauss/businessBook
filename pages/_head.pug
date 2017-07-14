@@ -6,6 +6,7 @@ head
   //CSS
   link(href="stylesheet/lib/materialize.min.css", type="text/css", rel="stylesheet")
   //link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css')
+  link(href="stylesheet/head.css", type="text/css", rel="stylesheet")
 
   //Import Google Icon Font
   link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet', type='text/css')
@@ -17,7 +18,10 @@ head
 body
   nav
     div.nav-wrapper
-      a.brand-logo(href='/') Logo
+      //a.brand-logo(href='/') Logo
+
+      a(href='/')
+        img(class='rs' id='logomenu' src='images/bb_logo.jpg' alt='logo')
       ul#nav-mobile.right.hide-on-med-and-down
         li
           a(href='/') Home

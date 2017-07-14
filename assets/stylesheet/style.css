@@ -7,12 +7,14 @@ body {
   display : flex;
   min-height: 100vh;
   flex-direction: column;
+  /*background-color: #ffcc80;*/
 }
 
 main{
   flex: 1 0 auto;
 }
 
+/*main page*/
 .square {
     float:left;
     position: relative;
@@ -45,7 +47,6 @@ main{
 }
 
 /*  For responsive images */
-
 .content .rs{
     width:auto;
     height:auto;
@@ -53,12 +54,30 @@ main{
     max-width:100%;
 }
 /*  For responsive images as background */
-
 .bg{
     background-position:center center;
     background-repeat:no-repeat;
     background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
     color:#fff;
+}
+
+.page-footer{
+    padding: 0% !important;
+}
+
+h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, h6.page-footer, p.page-footer{
+    color: #3e2723;
+}
+
+/*form styling*/
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #3e2723;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
 }
 
 .material-icons{
