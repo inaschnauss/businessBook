@@ -1,0 +1,29 @@
+include _head.pug
+
+//private CSS
+//link(href="stylesheet/lib/materialize.min.css", type="text/css", rel="stylesheet")
+link(href="stylesheet/head.css", type="text/css", rel="stylesheet")
+
+body
+  nav
+    div.nav-wrapper.cyan.lighten-2
+      //a.brand-logo(href='/') Logo
+
+      a(href='/')
+        img(class='rs' id='logomenu' src='images/bb_logo.jpg' alt='logo')
+      ul#nav-mobile.right.hide-on-med-and-down
+        li
+          a(href='/') Home
+        li
+          a(href='/calendar') Calender
+        li
+          a.dropdown-button(href='#!', data-activates='dropdown1')
+            | Search
+            i.material-icons.right arrow_drop_down
+    ul#dropdown1.dropdown-content
+      li
+        a(href='/findcompany') Company
+      li
+        a(href='/findpeople') People
+      li
+        a(href='/findrandom') Knowledge
