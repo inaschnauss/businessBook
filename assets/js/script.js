@@ -12,10 +12,10 @@ $( document ).ready(function() {
   })
   $('select').material_select();
 
-  if($("#calendar")[0]){
-    $("#calendar").fullCalendar();
-
-}
+//   if($("#calendar")[0]){
+//     $("#calendar").fullCalendar();
+//
+// }
 
 
 })
