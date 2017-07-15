@@ -7,11 +7,15 @@ body {
   display : flex;
   min-height: 100vh;
   flex-direction: column;
-  /*background-color: #ffcc80;*/
 }
 
 main{
   flex: 1 0 auto;
+}
+
+footer{
+    margin-bottom: -20px;
+    padding: 0% !important;
 }
 
 /*main page*/
@@ -59,10 +63,6 @@ main{
     background-repeat:no-repeat;
     background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
     color:#fff;
-}
-
-.page-footer{
-    padding: 0% !important;
 }
 
 h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, h6.page-footer, p.page-footer{

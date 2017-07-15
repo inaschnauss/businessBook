@@ -1,4 +1,4 @@
-footer.page-footer.orange.lighten-3(style='height: 100%;')
+footer.page-footer.orange.lighten-3#idfooter
   div.row.col.s12
     ul.tabs.orange.lighten-3
       li.tab.col.s1.right
@@ -55,11 +55,12 @@ footer.page-footer.orange.lighten-3(style='height: 100%;')
     $(document).ready(function(){
       console.log("test");
     });
-    function scrollMenu(){
-      $.scrollTo($('#menudiv'), 500);
-      console.log("scrollMenu");
-    }
     function scrollEnd(){
       $.scrollTo(document.body.scrollHeight, 500);
-      console.log("scrollEnd");
+      $('#idfooter').attr('style','height:100%');
+    }
+     function scrollMenu(){
+      $.scrollTo($('#menudiv'), 500);
+      $('#idfooter').attr('style','height:9%');
+      console.log("scrollMenu");
     }
