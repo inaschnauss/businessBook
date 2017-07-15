@@ -12,10 +12,14 @@ $( document ).ready(function() {
   })
   $('select').material_select();
 
-//   if($("#calendar")[0]){
-//     $("#calendar").fullCalendar();
-//
-// }
-
-
 })
+
+
+
+// $(document).ready(function(){
+//   console.log("test");
+// });
+function smoothScroll(){
+  console.log("hello");
+  $.scrollTo($('#menudiv'), 500);
+}
