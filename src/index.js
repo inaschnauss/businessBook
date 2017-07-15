@@ -58,14 +58,14 @@ app.get("/findpeople", function(req, res){
 	res.render('FindPeople', {});
 });
 
+app.get("/findrandom", function(req, res){
+	res.render('FindRandom', {});
+});
+
 app.post('/search', function(req, res) {
     var company_name = req.body.name;
     var company_age = req.body.age;
     res.redirect('http://www.google.com/search?q=' + company_name + '+' + company_age);
-});
-
-app.get("/findrandom", function(req, res){
-	res.render(__dirname+'/pages/FindRandom.pug')
 });
 
 app.get("/calendar", function(req, res){
