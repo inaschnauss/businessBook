@@ -80,6 +80,6 @@ h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, 
     box-shadow: 0 1px 0 0 #4dd0e1;
 }
 
-.material-icons{
-    color: #5d4037;
+.material-icons#arrow{
+    color: #ffcc80;
 }

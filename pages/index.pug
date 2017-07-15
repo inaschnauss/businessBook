@@ -21,13 +21,14 @@ style.
 
 body
   //top-banner
-  div(class='cyan lighten-2' style='height: 100%;' onload='myFunction()')
-    h1(class='center-align brown-text text-darken-2' style='line-height: 50vw;')
-      | 
-      span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
-      | u s i n e s s b o o k 
+  div(class='cyan lighten-2' style='height: 100%;')
+    .center-align(style='padding-top: 35vh;')
+      h1(class='brown-text text-darken-2')
+        | 
+        span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
+        | u s i n e s s b o o k 
       a(href='javascript:smoothScroll()') 
-        i(class='material-icons medium bottom') keyboard_arrow_down
+        i(class='material-icons medium' id='arrow') keyboard_arrow_down
     
   //menu      
   div(class='brown lighten-5 container' id='menudiv' style='height: 90%;')
