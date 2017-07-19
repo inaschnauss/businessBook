@@ -71,6 +71,14 @@ app.post('/search', function(req, res) {
 app.get("/calendar", function(req, res){
 	res.render(__dirname+'/pages/calendar.pug');
 });
+
+app.get("/register", function(req, res){
+	res.render(__dirname+'/pages/register.pug');
+});
+
+app.get("/profile", function(req, res){
+	res.render(__dirname+'/pages/profile.pug');
+});
 /*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'*/
 
 app.get("/contactus", function(req, res){
@@ -83,19 +91,8 @@ app.get("/faqs", function(req, res){
 	res.send(html)
 });
 
-app.get("/profile", function(req, res){
-	var html = pug.renderFile('/pages/profile.pug');
-	res.send(html);
-});
-
-
 app.get("/impressum", function(req, res){
 	var html = pug.renderFile('/pages/impressum.pug');
-	res.send(html);
-});
-
-app.get("/register", function(req, res){
-	var html = pug.renderFile('/pages/register.pug');
 	res.send(html);
 });
 
