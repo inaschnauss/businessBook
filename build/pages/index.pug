@@ -27,29 +27,30 @@ body
                 input(placeholder='Username' type='text')
                 input(placeholder='Password' type='password')
                 a(href='/profilemain#menudiv')
-                  button.btn.btn-small.waves-effect.cyan.lighten-2 Login
+                  button.btn.btn-small.waves-effect.light-blue Login
                 //(type='submit')
                 //p forgot your password?
                 a(href='/register')
-                  p register
+                  p.light-blue-text Register
               when 1
-                h4.left Hello, Shofa!
-                i.material-icons.large account_circle
+                h4.center.brown-text.text-darken-2 Hello, Shofa!
+                i.material-icons.large.brown-text.text-darken-2 account_circle
                 br
                 page
                 |
-                i.material-icons.small chat_bubble_outline
-                |edit profile
-                p log out
+                i.material-icons.small.light-blue-text chat_bubble_outline
+                |
+                a.light-blue-text edit profile
+                p.light-blue-text log out
               default
                 a(href='/signin#menudiv') 
-                  h3 Sign in / Register
+                  h3.light-blue-text Sign in / Register
     .square
       .content.brown.darken-2
         .table
           .table-cell
             div(class='center-align' ) 
-              h3 Search
+              h3.orange-text.text-lighten-3 Search
               form
                 div(class='input-field')
                 input(id='search' type='search' required)
@@ -59,28 +60,28 @@ body
                 i(class='material-icons')
                   close
                 a(href='/findcompany' class='center-align')
-                  p advanced
+                  p.light-blue-text advanced
     .square.brown.darken-2
       .content
         .table
           .table-cell
             div(class='center-align') 
               a(href='https://www.wikiwand.com/de/Business')
-                h3 Knowledge Page 
+                h3.light-blue-text Knowledge Page 
     .square.cyan.lighten-2
       .content
         .table
           .table-cell
             div(class='center-align container') 
               a(href='/calendar')
-                h3 Event Calendar
+                h3.light-blue-text Event Calendar
     .square.orange.lighten-3
       .content
         .table
           .table-cell
             div(class='center-align') 
               //a(href='add page link here')    
-              h3 Browse Company
+              h3.brown-text.text-darken-2 Browse Company
 
 include _footer.pug
 //include _script.pug

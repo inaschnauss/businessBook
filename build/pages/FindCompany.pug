@@ -1,10 +1,10 @@
 include _logoHeader.pug
-                
+
 main.brown.lighten-5
   form.col.s6.container(method='POST' action='/search')
-    div.row
+    div.input-field.row
       input.col.s7.push-s5(placeholder='Name' name="name", type ='text')
-      h5.col.s5.pull-s7 Company Name
+      h5.col.s5.pull-s7.brown-text.text-darken-2 Company Name
 
     div.input-field.row 
       div.browser-default.col.s7.push-s5
@@ -13,29 +13,29 @@ main.brown.lighten-5
           option(value='1') Option 1
           option(value='2') Option 2
           option(value='3') Option 3
-      h5.col.s5.pull-s7 Company Field
+      h5.col.s5.pull-s7.brown-text.text-darken-2 Company Field
 
 
-    div.row 
+    div.input-field.row 
       input.col.s7.push-s5(placeholder='Age' name="age", type ='text')
-      h5.col.s5.pull-s7 Company Age
+      h5.col.s5.pull-s7.brown-text.text-darken-2 Company Age
 
-    div.row 
+    div.input-field.row 
       div.col.s12.m5
-        h5 Foundet  
+        h5.brown-text.text-darken-2 Foundet  
       div.col.s12.m6.l3
-        a.col.s4.waves-effect.waves-light.btn before   
-        a.col.s2.waves-effect.waves-light.btn in
-        a.col.s4.waves-effect.waves-light.btn after
+        a.col.s4.waves-effect.waves-light.btn.light-blue before   
+        a.col.s2.waves-effect.waves-light.btn.light-blue in
+        a.col.s4.waves-effect.waves-light.btn.light-blue after
       div.col.s12.m6.l3                   
-        input(placeholder='Placeholder' name="foundet", type ='text')
+        input#test(placeholder='Placeholder' name="foundet", type ='text')
 
-    div.row 
+    div.input-field.row 
       input.col.s7.push-s5(placeholder='town' name="area", type ='text') 
-      h5.col.s5.pull-s7 Area
+      h5.col.s5.pull-s7.brown-text.text-darken-2 Area
 
     div.row                        
-      button.waves-effect.waves-light.btn.right(type='submit') Search
-        i.material-icons search
+      button.waves-effect.waves-light.btn.right.light-blue(type='submit') Search
+        i.material-icons.right search
 
 include _footer.pug
