@@ -78,7 +78,7 @@ h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, 
 /* label underline focus color */
 .input-field input[type=text]:focus {
     border-bottom: 1px solid #4dd0e1;
-    box-shadow: 0 1px 0 0 #4dd0e1;
+    box-shadow: 0 1px 0 0 #03a9f4;
 }
 
 .material-icons#arrow{

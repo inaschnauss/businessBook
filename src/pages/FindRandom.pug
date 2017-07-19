@@ -1,18 +1,18 @@
 include _logoHeader.pug
-                
+
 main.brown.lighten-5
   form.col.s6.container(method='POST' action='/search')
-    div.row 
+    div.input-field.row 
       div.col.s12.m5
-        h5 Search
+        h5.brown-text.text-darken-2 Search
       div.col.s12.m6.l3                   
         input(placeholder='Search' name="name", type ='text')
       div.col.s12.m6.l3                 
-        button.waves-effect.waves-light.btn.right(type='submit') Search
-          i.material-icons search
+        button.waves-effect.waves-light.btn.right.light-blue(type='submit') Search
+          i.material-icons.right search
 
-    div.row 
+    div.input-field.row 
       input.col.s7.push-s5(placeholder='Field' name='age', type ='text')
-      h5.col.s5.pull-s7 Field
+      h5.col.s5.pull-s7.brown-text.text-darken-2 Field
 
 include _footer.pug
