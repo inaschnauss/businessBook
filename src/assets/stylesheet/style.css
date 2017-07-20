@@ -15,8 +15,11 @@ main{
 }
 
 footer{
-    margin-bottom: -20px;
     padding: 0% !important;
+}
+
+#hideScroll {
+  overflow: hidden;
 }
 
 /*main page*/
