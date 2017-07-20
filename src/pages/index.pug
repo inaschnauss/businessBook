@@ -4,7 +4,7 @@ body
   //top-banner
   div(class='cyan lighten-2' style='height: 100%;')
     .center-align(style='padding-top: 35vh;')
-      h1(class='brown-text text-darken-2')
+      h1.brown-text.text-darken-2(style='font-size: 15vh;')
         | 
         span(class=' orange-text text-lighten-3' style='font-weight: bold;') B 
         | u s i n e s s b o o k 
@@ -24,27 +24,26 @@ body
           .table-cell.center-align
             case data.signIn
               when 0
-                input(placeholder='Username' type='text')
-                input(placeholder='Password' type='password')
+                input.menuform(placeholder='Username' type='text')
+                input.menuform(placeholder='Password' type='password')
                 a(href='/profilemain#menudiv')
                   button.btn.btn-small.waves-effect.light-blue Login
-                //(type='submit')
-                //p forgot your password?
-                a(href='/register')
-                  p.light-blue-text Register
+                a.brown-text.text-darken-2(href='/register')
+                  p Register
               when 1
                 h4.fontmenu.center.brown-text.text-darken-2 Hello, Shofa!
                 i.material-icons.large.brown-text.text-darken-2 account_circle
                 br
-                page
+                br
+                br
+                a.brown-text.text-darken-2(style='margin-right: 1em;') edit profile   
                 |
-                i.material-icons.small.light-blue-text chat_bubble_outline
-                |
-                a.light-blue-text edit profile
-                p.light-blue-text log out
+                a.brown-text.text-darken-2 log out
+                
               default
                 a.fontmenu(href='/signin#menudiv') 
                   h3.light-blue-text Sign in / Register
+
     .square
       .content.brown.darken-2
         .table
@@ -53,14 +52,14 @@ body
               h3.fontmenu.orange-text.text-lighten-3 Search
               form
                 div(class='input-field')
-                input(id='search' type='search' required)
+                input.menuform(id='search' type='search' required)
                 label(class='label-icon' for='search')
                 i(class='material-icons')
                   search
                 i(class='material-icons')
                   close
-                a(href='/findcompany' class='center-align')
-                  p.light-blue-text advanced
+                a.orange-text.text-lighten-3.right(href='/findcompany')
+                  p advanced
     .square.brown.darken-2
       .content
         .table
@@ -68,6 +67,7 @@ body
             div(class='center-align') 
               a(href='https://www.wikiwand.com/de/Business')
                 h3.fontmenu.light-blue-text Knowledge Page 
+
     .square.cyan.lighten-2
       .content
         .table
@@ -75,6 +75,7 @@ body
             div(class='center-align container') 
               a(href='/calendar')
                 h3.fontmenu.light-blue-text Event Calendar
+                
     .square.orange.lighten-3
       .content
         .table
