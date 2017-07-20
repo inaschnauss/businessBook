@@ -18,8 +18,16 @@
 }
 
 /*Buttons*/
-#calendar .fc-right{
+#calendar .fc-prev-button:hover{
+  background-color: #e0e0e0;
+}
 
+#calendar .fc-next-button:hover{
+  background-color: #e0e0e0;
+}
+
+#calendar .fc-today-button:hover{
+  background-color: #e0e0e0;
 }
 
 /*Date header*/
@@ -34,7 +42,7 @@
 }
 
 #calendar .fc-day:hover {
-  background-color: red;
+  background-color: #e0e0e0;
 }
 
 #calendar .fc-today:hover{
