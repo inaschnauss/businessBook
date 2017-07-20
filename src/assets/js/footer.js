@@ -2,8 +2,9 @@
     console.log("test");
   });
   function scrollEnd(){
-    $.scrollTo(document.body.scrollHeight, 500);
     $('#idfooter').attr('style','height:100%');
+    $(document.body).scrollTop()
+    $.scrollTo('max', 500);
   }
 
    function scrollMenu(){
