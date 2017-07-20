@@ -88,3 +88,7 @@ h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, 
 .brown.lighten-5{
     margin-top: 3%;
 }
+
+.fontmenu{
+    font-size: 6vmin;
+}
