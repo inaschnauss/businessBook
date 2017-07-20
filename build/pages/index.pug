@@ -31,7 +31,7 @@ body
                 a.brown-text.text-darken-2(href='/register')
                   p Register
               when 1
-                h4.center.brown-text.text-darken-2 Hello, Shofa!
+                h4.fontmenu.center.brown-text.text-darken-2 Hello, Shofa!
                 i.material-icons.large.brown-text.text-darken-2 account_circle
                 br
                 br
@@ -41,14 +41,15 @@ body
                 a.brown-text.text-darken-2 log out
                 
               default
-                a.brown-text.text-darken-2(href='/signin#menudiv') 
-                  h3 Sign in / Register
+                a.fontmenu(href='/signin#menudiv') 
+                  h3.light-blue-text Sign in / Register
+                 
     .square
       .content.brown.darken-2
         .table
           .table-cell
             div(class='center-align' ) 
-              h3.orange-text.text-lighten-3 Search
+              h3.fontmenu.orange-text.text-lighten-3 Search
               form
                 div(class='input-field')
                 input.menuform(id='search' type='search' required)
@@ -64,22 +65,24 @@ body
         .table
           .table-cell
             div(class='center-align') 
-              a.orange-text.text-lighten-3(href='https://www.wikiwand.com/de/Business')
-                h3 Knowledge Page 
+              a(href='https://www.wikiwand.com/de/Business')
+                h3.fontmenu.light-blue-text Knowledge Page 
+
     .square.cyan.lighten-2
       .content
         .table
           .table-cell
             div(class='center-align container') 
-              a.brown-text.text-darken-2(href='/calendar')
-                h3 Event Calendar
+              a(href='/calendar')
+                h3.fontmenu.light-blue-text Event Calendar
+
     .square.orange.lighten-3
       .content
         .table
           .table-cell
             div(class='center-align') 
               //a(href='add page link here')    
-              h3.brown-text.text-darken-2 Browse Company
+              h3.fontmenu.brown-text.text-darken-2 Browse Company
 
 include _footer.pug
 //include _script.pug
