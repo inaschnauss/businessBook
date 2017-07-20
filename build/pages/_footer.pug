@@ -13,30 +13,31 @@ footer.page-footer.orange.lighten-3#idfooter
     div.row
       h3.brown-text.darken-2 Contact Us  
       div.col.s12(style='height: 2%')
-      form(method='POST' action='/register')
-        div.input-field.col-s6
-          input#footerName(type="text") 
-          label(for="footerName") Firstname Lastname
+        form(method='POST' action='/register')
 
-        div.input-field.col-s6  
-          input#footerEmail(type="text")
-          label(for='footerEmail') Email
+          div.input-field.col-s6
+            input#footerName(type="text") 
+            label(for='footerName') Firstname Lastname
 
-        div.input-field.col-s6  
-          input#footerEmail2(type="text")
-          label(for='footerEmail2') Repeat Email
+          div.input-field.col-s6  
+            input#footerEmail(type="text")
+            label(for='footerEmail') Email
 
-        div.input-field.col-s6  
-          input#footerPW(type="text")
-          label(for='footerPW') Password
+          div.input-field.col-s6  
+            input#footerEmail2(type="text")
+            label(for='footerEmail2') Repeat Email
 
-        div.input-field.col-s6  
-          input#footerPW2(type="text")
-          label(for='footerPW2') Confirm Password
+          div.input-field.col-s6  
+            input#footerPW(type="text")
+            label(for='footerPW') Password
 
-        a#sendButton.btn.waves-effect.waves-light.light-blue(type="submit", name="action") Submit
-          |
-          i.material-icons.right send
+          div.input-field.col-s6  
+            input#footerPW2(type="text")
+            label(for='footerPW2') Confirm Password
+
+          a#sendButton.btn.waves-effect.waves-light.light-blue(type="submit", name="action") Submit
+            |
+            i.material-icons.right send
 
   #faqs.col.s12.container.brown-text.text-darken-2
     h4 Frequently Asked Questions

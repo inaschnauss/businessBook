@@ -1,8 +1,8 @@
-//sign up button
+//contactUS send button
 $( document ).ready(function() {
-  console.log( "sign-up-button-register" );
-  $("#sign-up-button").click(function(){
-    $("input").each(function(index, element){
+  console.log( "sendButton-contactUS" );
+  $("#sendButton").click(function(){
+    $("input", $("#contactus")).each(function(index, element){
       if(element.value.length == 0){
         $(element).addClass("border-error")
       }else{
@@ -13,11 +13,11 @@ $( document ).ready(function() {
   $('select').material_select();
 })
 
-//send button
+//register sign-up-button
 $( document ).ready(function() {
-  console.log( "sendButton-contactUS" );
-  $("#sendButton").click(function(){
-    $("input").each(function(index, element){
+  console.log( "sign-up-button-register" );
+  $("#sign-up-button").click(function(){
+    $("input", $("#registerPage")).each(function(index, element){
       if(element.value.length == 0){
         $(element).addClass("border-error")
       }else{
