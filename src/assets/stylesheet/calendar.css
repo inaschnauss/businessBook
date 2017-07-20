@@ -32,3 +32,11 @@
   background: #ffcc80;
   font-weight: bold;
 }
+
+#calendar .fc-day:hover {
+  background-color: red;
+}
+
+#calendar .fc-today:hover{
+  background-color: #ffcc80;
+}
