@@ -48,16 +48,18 @@ body
       .content.brown.darken-2
         .table
           .table-cell
-            div(class='center-align' ) 
+            div(class='center-align' )
               h3.fontmenu.orange-text.text-lighten-3 Search
-              form
+              form(method='POST' action='/searchindex')
                 div(class='input-field')
-                input.menuform(id='search' type='search' required)
+                input.menuform(id='search' name="search", type='search' required)
                 label(class='label-icon' for='search')
                 i(class='material-icons')
                   search
                 i(class='material-icons')
                   close
+                button.btn-small.waves-effect.waves-light.btn.left.light-blue(type='submit') Search
+                  i.material-icons.right search
                 a.orange-text.text-lighten-3.right(href='/findcompany')
                   p advanced
     .square.brown.darken-2

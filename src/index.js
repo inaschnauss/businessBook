@@ -20,10 +20,11 @@ app.get("/", function(req, res){ //diese funktion nennt sich callback
 
 	var data = {signIn: null};
 	res.render(__dirname+'/pages/index', {data:data});
-	// var compileFunction = pug.compileFile('./pages/index.pug');
-	// var html = compileFunction(data);
-	// res.send(html); //der ganze backend scheiß
+});
 
+app.post('/searchindex', function(req, res) {
+    var search_ = req.body.search;
+    res.redirect('http://www.google.com/search?q=' + search_ );
 });
 
 app.get("/signin", function(req, res){
@@ -35,20 +36,6 @@ app.get("/profilemain", function(req, res){
 	var data = {signIn: 1};
 	res.render(__dirname+'/pages/index', {data:data});
 });
-
-//there is Something wrong with the code, you can´t use "register" because this is the name of my page
-//dublicate root definition for register
-
-// app.get("/register", function(req, res){
-// 	var data = {signIn: 1};
-// 	res.render(__dirname+'/pages/index', {data:data});
-//
-// 	var compileFunction = pug.compileFile('./pages/index.pug');
-// 	var data = {name: "Ina Asra Shofa"};
-// 	var html = compileFunction(data);
-// 	res.send(html); //backend&co
-//
-// });
 
 app.get("/findcompany", function(req, res){
 	res.render('FindCompany', {});
