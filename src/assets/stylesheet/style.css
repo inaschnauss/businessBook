@@ -18,6 +18,11 @@ footer{
     padding: 0% !important;
 }
 
+/*.tabs .tab a {
+  text-overflow: inherit;
+  man muss noch width % verändern
+}*/
+
 #hideScroll {
   overflow: hidden;
 }
