@@ -16,6 +16,7 @@ main{
 
 footer{
     padding: 0% !important;
+    margin-bottom: -20px;
 }
 
 /*.tabs .tab a {
@@ -95,6 +96,7 @@ h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, 
     color: #ffcc80;
 }
 
+
 .brown.lighten-5{
     margin-top: 3%;
 }
@@ -107,16 +109,38 @@ h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, 
    .fontmenu {
      font-size: 35px;
   }
+    .menuform{
+    margin-bottom: 5px !important;
+    }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
    .fontmenu {
      font-size: 25px;
   }
+    .menuform{
+        margin-bottom: 5px !important;
+    }
+    p#registeradvanced{
+        margin: 5 !important;
+    }
+}
+
+@media(max-width: 700px) {
+    .menuform{
+        height: 2rem !important;
+        margin-bottom: 5px !important;
+    }
+    .material-icons#account{
+    font-size: 4rem; 
+    }
 }
 
 @media(max-width: 600px) {
    .fontmenu {
      font-size: 20px;
+  }
+  a#profilelogout{
+      display: none;
   }
 }
