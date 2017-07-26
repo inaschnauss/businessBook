@@ -16,6 +16,7 @@ main{
 
 footer{
     padding: 0% !important;
+    margin-bottom: -20px;
 }
 
 /*.tabs .tab a {
