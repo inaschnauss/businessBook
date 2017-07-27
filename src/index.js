@@ -68,21 +68,6 @@ app.get("/profile", function(req, res){
 });
 /*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'*/
 
-app.get("/contactus", function(req, res){
-	var html = pug.renderFile('/pages/contactus.pug')
-	res.send(html)
-});
-
-app.get("/faqs", function(req, res){
-	var html = pug.renderFile('/pages/faqs.pug')
-	res.send(html)
-});
-
-app.get("/impressum", function(req, res){
-	var html = pug.renderFile('/pages/impressum.pug');
-	res.send(html);
-});
-
 app.listen(3000, function(){
 	console.log("bla bla port 3000")
 });
