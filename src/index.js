@@ -63,18 +63,18 @@ app.get("/register", function(req, res){
 	res.render(__dirname+'/pages/register.pug');
 });
 
-app.get("/profile", function(req, res){
-	res.render(__dirname+'/pages/profile.pug');
+app.get("/musterprofile", function(req, res){
+	res.render(__dirname+'/pages/musterprofile.pug');
 });
 /*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'*/
 
-app.get("/knowledge", function(req, res){
-	var html = pug.renderFile('/pages/knowledge.pug');
+app.get("/musterknowledge", function(req, res){
+	var html = pug.renderFile('/pages/musterknowledge.pug');
 	res.send(html);
 });
 
-app.get("/company", function(req, res){
-	var html = pug.renderFile('/pages/company.pug')
+app.get("/mustercompany", function(req, res){
+	var html = pug.renderFile('/pages/mustercompany.pug')
 	res.send(html)
 });
 
