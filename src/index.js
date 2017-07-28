@@ -69,13 +69,11 @@ app.get("/musterprofile", function(req, res){
 /*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'*/
 
 app.get("/musterknowledge", function(req, res){
-	var html = pug.renderFile('/pages/musterknowledge.pug');
-	res.send(html);
+	res.render(__dirname+'/pages/musterknowledge.pug');
 });
 
 app.get("/mustercompany", function(req, res){
-	var html = pug.renderFile('/pages/mustercompany.pug')
-	res.send(html)
+	res.render(__dirname+'/pages/mustercompany.pug');
 });
 
 app.listen(3000, function(){
