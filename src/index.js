@@ -63,24 +63,17 @@ app.get("/register", function(req, res){
 	res.render(__dirname+'/pages/register.pug');
 });
 
-app.get("/profile", function(req, res){
-	res.render(__dirname+'/pages/profile.pug');
+app.get("/musterprofile", function(req, res){
+	res.render(__dirname+'/pages/musterprofile.pug');
 });
 /*als beispiel für res.send '<strong style="color: red">Hello World!</strong>'*/
 
-app.get("/contactus", function(req, res){
-	var html = pug.renderFile('/pages/contactus.pug')
-	res.send(html)
+app.get("/musterknowledge", function(req, res){
+	res.render(__dirname+'/pages/musterknowledge.pug');
 });
 
-app.get("/faqs", function(req, res){
-	var html = pug.renderFile('/pages/faqs.pug')
-	res.send(html)
-});
-
-app.get("/impressum", function(req, res){
-	var html = pug.renderFile('/pages/impressum.pug');
-	res.send(html);
+app.get("/mustercompany", function(req, res){
+	res.render(__dirname+'/pages/mustercompany.pug');
 });
 
 app.listen(3000, function(){

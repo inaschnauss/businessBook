@@ -144,3 +144,12 @@ h1.page-footer, h2.page-footer, h3.page-footer, h4.page-footer, h5.page-footer, 
       display: none;
   }
 }
+
+.radio-blue[type="radio"].with-gap:checked + label:before {
+border-radius: 50%;
+border: 2px solid #4dd0e1; }
+
+.radio-blue[type="radio"].with-gap:checked + label:after{
+     border: 2px solid #4dd0e1;
+     background-color: #4dd0e1;
+}
